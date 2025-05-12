@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Proyecto PHP5</title>
 </head>
 <body>
     <div class="container mt-5">
@@ -38,6 +38,33 @@
                             <th>Acciones</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <?php
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                            <tr>
+                                <td>
+                                    <?php echo $row['cod_estudiante'] ?>
+                                </td>
+                                <td>
+                                    <?php echo $row['ine'] ?>
+                                </td>
+                                <td>
+                                    <?php echo $row['nombre'] ?>
+                                </td>
+                                <td>
+                                    <?php echo $row['apellidos'] ?>
+                                </td>
+                                <td>
+                                    <a href="actualizar.php?id=<?php echo $row['cod_estudiante']?>" class="btn btn-warning">Editar</a>
+                                    |
+                                    <a href="delete.php?id=<?php echo $row['cod_estudiante']?>" class="btn btn-danger">Borrar</a>
+                                </td>
+                            </tr>
+                        <?php
+                            }
+                        ?>
+                    </tbody>
                 </table>
             </div>
         </div>
