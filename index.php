@@ -16,10 +16,13 @@
     <title>Proyecto PHP5</title>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-2">
+        <div class="row">
+            <h1 class="text-center">Proyecto CRUD 🥐</h1>
+        </div>
         <div class="row">
             <div class="col-md-3">
-                <h1>Imgresa los datos del alumno</h1>
+                <h3>Ingresa los Datos</h3>
                 <form action="insertar.php" method="post"> 
                     <input type="text" name="ine" class="form-control mb-3" placeholder="Escribe tu ine">
                     <input type="text" name="nombre" class="form-control mb-3" placeholder="Escribe tu nombre">
@@ -28,6 +31,9 @@
                 </form>
             </div>
             <div class="col-md-8">
+                <div class="row">
+                    <h3 class="text-center">Alumnos del Sistema</h3>
+                </div>
                 <table class="table">
                     <thead class="table-success table-striped">
                         <tr>
