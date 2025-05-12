@@ -27,6 +27,7 @@
             <input type="text" name="nombre" class="form-control mb-3" value="<?php echo $alumno['nombre']?>" placeholder="Escribe tu nombre">
             <input type="text" name="apellidos" class="form-control mb-3" value="<?php echo $alumno['apellidos']?>" placeholder="Escribe tus apellidos">
             <input type="submit" value="Actualizar" class="btn btn-primary btn-block">
+            <button class="btn btn-dark" @onclick="location.redirect('index.php')">Regresar</button>
         </form>
     </div>
 </body>
